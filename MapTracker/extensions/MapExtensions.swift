@@ -20,7 +20,7 @@ extension MKMapView {
             guard let longitude = route.longitude else {
                 return
             }
-            
+        
             let coordinate2d = CLLocationCoordinate2DMake(Double(latitude), Double(longitude))
             arrayOfCoordinates.append(coordinate2d)
         }

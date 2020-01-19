@@ -29,7 +29,6 @@ class ViewController: UIViewController {
     }
 
     @objc func fetchData() {
-        map.setMapCameraPosition(map.userLocation.coordinate, cameraDistance:  0.005)
         SimpleApi().fetchData(delegate: self)
     }
     
