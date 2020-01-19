@@ -15,6 +15,11 @@
 		045431C523D4008D009A45A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 045431C323D4008D009A45A2 /* LaunchScreen.storyboard */; };
 		045431D023D4008D009A45A2 /* MapTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045431CF23D4008D009A45A2 /* MapTrackerTests.swift */; };
 		045431DB23D4008D009A45A2 /* MapTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045431DA23D4008D009A45A2 /* MapTrackerUITests.swift */; };
+		045431E923D400D7009A45A2 /* SimpleApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045431E823D400D7009A45A2 /* SimpleApi.swift */; };
+		045431EC23D40CE5009A45A2 /* TrackLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045431EB23D40CE5009A45A2 /* TrackLocation.swift */; };
+		045431EF23D414A8009A45A2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 045431EE23D414A8009A45A2 /* CoreLocation.framework */; };
+		045431F123D414FF009A45A2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 045431F023D414FF009A45A2 /* MapKit.framework */; };
+		045431F423D415EA009A45A2 /* MapExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045431F323D415EA009A45A2 /* MapExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,11 @@
 		045431D623D4008D009A45A2 /* MapTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MapTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		045431DA23D4008D009A45A2 /* MapTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTrackerUITests.swift; sourceTree = "<group>"; };
 		045431DC23D4008D009A45A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		045431E823D400D7009A45A2 /* SimpleApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleApi.swift; sourceTree = "<group>"; };
+		045431EB23D40CE5009A45A2 /* TrackLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackLocation.swift; sourceTree = "<group>"; };
+		045431EE23D414A8009A45A2 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		045431F023D414FF009A45A2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		045431F323D415EA009A45A2 /* MapExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +66,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				045431F123D414FF009A45A2 /* MapKit.framework in Frameworks */,
+				045431EF23D414A8009A45A2 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +95,7 @@
 				045431CE23D4008D009A45A2 /* MapTrackerTests */,
 				045431D923D4008D009A45A2 /* MapTrackerUITests */,
 				045431B623D4008B009A45A2 /* Products */,
+				045431ED23D414A7009A45A2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +112,8 @@
 		045431B723D4008B009A45A2 /* MapTracker */ = {
 			isa = PBXGroup;
 			children = (
+				045431F223D415DA009A45A2 /* extensions */,
+				045431EA23D40CCE009A45A2 /* api */,
 				045431B823D4008B009A45A2 /* AppDelegate.swift */,
 				045431BA23D4008B009A45A2 /* SceneDelegate.swift */,
 				045431BC23D4008B009A45A2 /* ViewController.swift */,
@@ -126,6 +141,32 @@
 				045431DC23D4008D009A45A2 /* Info.plist */,
 			);
 			path = MapTrackerUITests;
+			sourceTree = "<group>";
+		};
+		045431EA23D40CCE009A45A2 /* api */ = {
+			isa = PBXGroup;
+			children = (
+				045431E823D400D7009A45A2 /* SimpleApi.swift */,
+				045431EB23D40CE5009A45A2 /* TrackLocation.swift */,
+			);
+			path = api;
+			sourceTree = "<group>";
+		};
+		045431ED23D414A7009A45A2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				045431F023D414FF009A45A2 /* MapKit.framework */,
+				045431EE23D414A8009A45A2 /* CoreLocation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		045431F223D415DA009A45A2 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				045431F323D415EA009A45A2 /* MapExtensions.swift */,
+			);
+			path = extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,7 +301,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				045431BD23D4008B009A45A2 /* ViewController.swift in Sources */,
+				045431EC23D40CE5009A45A2 /* TrackLocation.swift in Sources */,
+				045431F423D415EA009A45A2 /* MapExtensions.swift in Sources */,
 				045431B923D4008B009A45A2 /* AppDelegate.swift in Sources */,
+				045431E923D400D7009A45A2 /* SimpleApi.swift in Sources */,
 				045431BB23D4008B009A45A2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -435,6 +479,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HJ28CBRTR9;
 				INFOPLIST_FILE = MapTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -452,6 +497,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HJ28CBRTR9;
 				INFOPLIST_FILE = MapTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

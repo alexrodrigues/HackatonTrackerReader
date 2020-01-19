@@ -60,5 +60,14 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Gostariamos de saber sua localização para melhor informar o seu ônibus em tempo real.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Gostariamos de saber sua localização para melhor informar o seu ônibus em tempo real.</string>
 </dict>
 </plist>
